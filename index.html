@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Sign-up Form</title>
+</head>
+<body>
+    <main>
+        <div class="image">
+            <img src="images/laptop.jpg" alt="Macbook on a table with mouse, phone and smartwatch">
+            <div class="image-banner">
+                <img src="images/odin-lined.png" alt="Odin" class="image-banner-logo">
+                <span class="website-title">Odin</span>
+            </div>
+            <span class="image-credit">
+                Photo by <a href="https://unsplash.com/@altumcode">AltumCode</a> on <a href="https://unsplash.com/fr/photos/dMUt0X3f59Q">Unsplash</a>
+            </span>
+        </div>
+        <div class="form">
+            <div class="pre-form">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started</p>
+                <p>You <i>know you</i> want to.</p>
+            </div>
+            <div class="form-fields">
+                <h2>Let's do this!</h2>
+                <form id="create-account" onsubmit="event.preventDefault();checkForm()" >
+                    <div class="field">
+                        <label for="first-name">First Name</label><br>
+                        <input type="text" id="first-name" name="first-name" required><br>
+                    </div>
+                    <div class="field">
+                        <label for="last-name">Last Name</label><br>
+                        <input type="text" id="last-name" name="last-name" required><br>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                    </div>
+                    <div class="field">
+                        <label for="phone-number">Phone Number</label><br>
+                        <input type="tel" id="phone-number" name="phone-number" required><br>
+                    </div>
+                    <div class="field">
+                        <label for="password">Password</label><br>
+                        <input type="password" id="password" name="password" required onchange="checkPasswords()" class="password error"><br>
+                        <span class="password-error" id="password-error">* Password don't match</span>
+                    </div>
+                    <div class="field">
+                        <label for="confirm">Confirm Password</label><br>
+                        <input type="password" id="confirm" name="confirm" required onchange="checkPasswords()" class="password error"><br>
+                        <span></span>
+                    </div>
+                </form>
+            </div>
+            <div class="form-sign">
+                <button type="submit" class="sign-up" form="create-account">Create Account</button>
+                <p>Already have an account? <a href="#" class="sign-in">Log in</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
